@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sslsocket", "sslsocket\sslsocket.csproj", "{9C0B779B-1D86-4DB5-906D-AF48C21380F4}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tcpclient", "tcpclient\tcpclient.csproj", "{AAC20884-D836-40C1-BB4D-E5D4189218DB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bouncycastle", "..\lib\bouncycastle\bouncycastle.csproj", "{673BD9E8-F0C3-4F45-96C2-259D896A02A6}"
@@ -20,12 +18,6 @@ Global
 		{673BD9E8-F0C3-4F45-96C2-259D896A02A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{673BD9E8-F0C3-4F45-96C2-259D896A02A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{673BD9E8-F0C3-4F45-96C2-259D896A02A6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Build|Any CPU.ActiveCfg = Build|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Build|Any CPU.Build.0 = Build|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9C0B779B-1D86-4DB5-906D-AF48C21380F4}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AAC20884-D836-40C1-BB4D-E5D4189218DB}.Build|Any CPU.ActiveCfg = Build|Any CPU
 		{AAC20884-D836-40C1-BB4D-E5D4189218DB}.Build|Any CPU.Build.0 = Build|Any CPU
 		{AAC20884-D836-40C1-BB4D-E5D4189218DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -34,7 +26,7 @@ Global
 		{AAC20884-D836-40C1-BB4D-E5D4189218DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = sslsocket\sslsocket.csproj
+		StartupItem = tcpclient\tcpclient.csproj
 		Policies = $0
 		$0.DotNetNamingPolicy = $1
 		$1.DirectoryNamespaceAssociation = None

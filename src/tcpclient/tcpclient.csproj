@@ -44,6 +44,7 @@
     <WarningLevel>4</WarningLevel>
     <AssemblyName>tcpclient</AssemblyName>
     <NoStdLib>true</NoStdLib>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />
