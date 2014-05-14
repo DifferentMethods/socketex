@@ -31,10 +31,22 @@ namespace SocketEx
 			Connect (endpoint);
 		}
 
+		static IPEndPoint GetIPEndPointFromHostName (string hostName, int port)
+		{
+			var addresses = System.Net.Dns.GetHostAddresses (hostName);
+			if (addresses.Length == 0) {
+				throw new ArgumentException (
+					"Unable to retrieve address from specified host name.", 
+					"hostName"
+				);
+			}
+			return new IPEndPoint (addresses [0], port); 
+		}
+
 		public TcpClient (string host, int port)
 			: this (AddressFamily.InterNetwork)
 		{
-			var myEndpoint = new DnsEndPoint (host, port);
+			var myEndpoint = GetIPEndPointFromHostName (host, port);
 			InnerConnect (myEndpoint);
 		}
 
@@ -95,14 +107,14 @@ namespace SocketEx
 		}
 
 		public IAsyncResult BeginConnect (IPAddress[] addresses, int port, AsyncCallback requestCallback,
-		                                 object userToken)
+		                                  object userToken)
 		{
 			throw new NotImplementedException ();
 		}
 
 		public IAsyncResult BeginConnect (string host, int port, AsyncCallback requestCallback, object userToken)
 		{
-			endpoint = new DnsEndPoint (host, port);
+			endpoint = GetIPEndPointFromHostName (host, port);
 			return BeginConnect (requestCallback, userToken);
 		}
 
@@ -160,7 +172,7 @@ namespace SocketEx
 
 		public void Connect (string host, int port)
 		{
-			var myEndPoint = new DnsEndPoint (host, port);
+			var myEndPoint = GetIPEndPointFromHostName (host, port);
 			InnerConnect (myEndPoint);
 		}
 
